@@ -1,0 +1,46 @@
+.old-container {
+  width: 100%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.old-box {
+  width: 30%; /* 30% 3개의 박스 / 여백 10% 남음 */
+  height: 100px;
+  background-color: #ff6b6b;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+  margin-right: 5%;
+  float: left; /* 예전에 플렉스 역할을 했었음? */
+}
+
+/* 마지막 자식이다 라는 코드 = 박스3을 의미함 */
+.old-box:last-child {
+  margin-right: 0;
+}
+
+.old-container::after {
+  content: "";
+  display: table; /* 플렉스가 없을 시절 테이블 사용함 */
+  clear: both;
+}
+
+.new-container {
+  display: flex;
+  background: #f0f0f0;
+  padding: 20px;
+  gap: 20px; /* 내 자식들(박스3개)에게 20px만큼 여백을 준다 */
+}
+
+.new-box {
+  height: 100px;
+  background-color: #4ecdc4;
+  color: white;
+  align-items: center; /* 수직 방향 가운데 정렬 */
+  justify-content: center;
+  display: flex; /* 저스티파이 유효화를 위해 생성?
+  / 박스 내부의 문자(열)을 중앙 정렬하기 위함*/
+  flex: 1; /* 모든 박스가 같은 비율로 공간을 나누어 차지 한다 */
+}
