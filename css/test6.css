@@ -1,0 +1,67 @@
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.product-card {
+  width: 200px;
+  height: 280px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* 넘치는 부분을 보이지 않게 해라 */
+
+  /* 과정 = 상태가 변경될 때 얼마나 부드럽게 보여줄 것인가?
+  / 없다면 마우스를 올리는 순간 '툭' 끊기듯이 움직인다 */
+  transition:
+    background-color 0.4s ease,
+    transform 0.4s ease;
+  /* = 대상 : 백그라운드-컬러
+          시간 : 0.4초 동안 천천히 변화하시오
+          가속도 : ease -> 시작과 끝은 느리고 중간은 빠르게 진행 */
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  /* 변형 = 요소의 형태나 위치를 어떻게 바꿀 것인가를 정의한다
+      동작 : 크기, 위치, 회전, 기울기 조절*/
+  /* = 마우스를 올렸을 때 카드를 y축(세로) 방향으로 -5px만큼 이동시키는 명령
+  / 주변 요소의 배치에 영향을 주지 않고 자기 자신의 모습만 변경한다
+  / 다른 요소들을 건들이지 않는다 -> 밀어내지 않는다 */
+}
+
+/* 
+•  트랜스폼(과정)(상태 정의): "마우스를 올리면 위로 5px 움직이고 배경색을 바꿔라."
+•  트랜지션(변형)(효과 부여): "그런데 그 움직임을 0.4초 동안 부드럽게 처리해라."
+ */
+
+.product-image {
+  width: 100%;
+  height: 160px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.product-price {
+  color: #e91e63;
+  font-size: 18px;
+  font-weight: bold;
+}

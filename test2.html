@@ -9,17 +9,51 @@
     <title>반응형 웹 사이트 기초2</title>
   </head>
   <body>
-    <nav class="full-navbar">
-      <div class="logo">MyWebsite</div>
-      <div class="nav-menu">
-        <a href="#" class="nav-item">홈</a>
-        <a href="#" class="nav-item">소개</a>
-        <a href="#" class="nav-item">서비스</a>
-        <a href="#" class="nav-item">연락처</a>
-      </div>
-      <div class="auch-buttons">
-        <a href="#" class="login-btn">로그인</a>
-      </div>
-    </nav>
+    <h2>justify-content 실습</h2>
+
+    <h3>1. flex-start (기본값)</h3>
+    <div class="container" style="justify-content: flex-start">
+      <!-- 인라인 스타일 -->
+      <div class="item">아이템 1</div>
+      <div class="item">아이템 2</div>
+      <div class="item">아이템 3</div>
+    </div>
+
+    <h3>2. flex-end</h3>
+    <div class="container" style="justify-content: flex-end">
+      <div class="item">아이템 1</div>
+      <div class="item">아이템 2</div>
+      <div class="item">아이템 3</div>
+    </div>
+
+    <h3>3. center</h3>
+    <div class="container" style="justify-content: center">
+      <div class="item">아이템 1</div>
+      <div class="item">아이템 2</div>
+      <div class="item">아이템 3</div>
+    </div>
+
+    <h3>4. space-between</h3>
+    <div class="container" style="justify-content: space-between">
+      <div class="item">아이템 1</div>
+      <div class="item">아이템 2</div>
+      <div class="item">아이템 3</div>
+    </div>
+
+    <h3>5. space-around</h3>
+    <!-- 공백을 균등하게 준다 -->
+    <div class="container" style="justify-content: space-around">
+      <div class="item">아이템 1</div>
+      <div class="item">아이템 2</div>
+      <div class="item">아이템 3</div>
+    </div>
+
+    <h3>6. space-evenly</h3>
+    <!-- 공백이 같은 값으로 -->
+    <div class="container" style="justify-content: space-evenly">
+      <div class="item">아이템 1</div>
+      <div class="item">아이템 2</div>
+      <div class="item">아이템 3</div>
+    </div>
   </body>
 </html>

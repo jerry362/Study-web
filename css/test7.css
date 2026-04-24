@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 리셋css 안걸면 이렇게 하세요*/
+
+.container {
+  max-width: 1200px;
+  padding: 20px;
+  margin: 0 auto;
+}
+
+.card-grid {
+  display: flex;
+  flex-direction: column; /* 플렉스 진행방향 열*/
+  gap: 20px;
+  /* 갭 제외 모바일 상태 */
+}
+
+.card {
+  background-color: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgda(0, 0, 0, 0.1);
+}
+
+/* 태블릿 - 2열 그리드 */
+@media (min-width: 768px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* (반복횟수, 너비 알아서 균등하게 차지) */
+  }
+}
+
+/* 데스크탑 - 3열 그리드 */
+@media (min-width: 1024px) {
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ex) min-width: 768px = 768이 최솟값 = 768을 포함한 그 이상 */
+/* m 480px- / t 768px- / p 1024px- 통상 표준값 */

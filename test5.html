@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/test5.css" />
+
+    <title>반응형 웹 사이트 기초5</title>
+  </head>
+  <body>
+    <h3>flex-wrap: nowrap (기본값)</h3>
+    <div class="container nowrap">
+      <div class="item">카드 1</div>
+      <div class="item">카드 2</div>
+      <div class="item">카드 3</div>
+      <div class="item">카드 4</div>
+    </div>
+
+    <h3>flex-wrap: wrap</h3>
+    <div class="container wrap">
+      <div class="item">카드 1</div>
+      <div class="item">카드 2</div>
+      <div class="item">카드 3</div>
+      <div class="item">카드 4</div>
+    </div>
+  </body>
+</html>
+
+<!-- nowrap = 모든 아이템을 한 줄에 강제로 배치한다
+  + 줄 바꿈 안됨
+  부모 400, 자식4*150=600
+  600을 400에 맞도록 줄이는(내부축소) 한이 있어도 절대 줄바꿈을 하지 않는다 -->
+<!-- wrap
+  부모 400, 자식4*150=600
+  600을 줄이지 않고 알아서 줄 바꿔서 배치 하거라 -->
